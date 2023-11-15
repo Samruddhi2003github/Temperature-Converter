@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Temperature Converter</title>
+</head>
+<body>
+    <div class="converter-container">
+        <h2 class="title">Temperature Converter</h2>
+
+        <label for="temperature">Enter Temperature:</label>
+        <input type="text" id="temperature" placeholder="Enter temperature" oninput="validateInput()">
+
+        <div class="select-container">
+            <label for="inputUnit">Choose Input Unit:</label>
+            <select id="inputUnit">
+                <option value="celsius">Celsius</option>
+                <option value="fahrenheit">Fahrenheit</option>
+                <option value="kelvin">Kelvin</option>
+            </select>
+        </div>
+
+        <div class="select-container">
+            <label for="outputUnit">Choose Output Unit:</label>
+            <select id="outputUnit">
+                <option value="celsius">Celsius</option>
+                <option value="fahrenheit">Fahrenheit</option>
+                <option value="kelvin">Kelvin</option>
+            </select>
+        </div>
+
+
+        <!-- <label for="unit">Choose Unit:</label>
+        <select id="unit">
+            <option value="celsius">Celsius</option>
+            <option value="fahrenheit">Fahrenheit</option>
+            <option value="kelvin">Kelvin</option>
+        </select> -->
+
+        <button onclick="convertTemperature()">Convert</button>
+
+        <div id="result"></div>
+        <div id="modal" class="modal">
+            <div class="modal-content">
+                <p id="modal-message"></p>
+                <button onclick="closeModal()">OK</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
